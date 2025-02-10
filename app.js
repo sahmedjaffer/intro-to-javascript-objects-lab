@@ -333,6 +333,7 @@ Solve Exercise 18 here:
 
 catchedPokemon =['Kangaskhan', 'Scyther','Lapras','Jolteon']
 
+
  game.catchPokemon= function(pokemonObj){
   
   if (game.party.length <= 6){
