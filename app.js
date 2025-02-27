@@ -31,7 +31,7 @@ Exercise 3
 
 // Solve Exercise 3 here:
 
-game.difficulty=["Easy", "Med", "Hard"];
+game.difficulty= "Med";
 console.log('Exercise 3 solution');
 console.log(game);
 
@@ -46,8 +46,8 @@ Solve Exercise 4 here:
 */
 
   for(i = 0 ; i < pokemon.length;i++){
-    (pokemon[i].starter == true) && (game.party.push(pokemon[i]));
-    break;
+   if (pokemon[i].starter == true && game.party.push(pokemon[i])){
+    break;}
   }
   console.log('Exercise 4 solution');
 
@@ -133,7 +133,7 @@ Solve Exercise 8 here:
 console.log('Exercise 8 solution');
 game.party.forEach(gameParty => {
   console.log(' ********* ')
-  console.log(gameParty)
+  console.log(gameParty.name)
   console.log(' --------- ')
 })
 
@@ -148,7 +148,7 @@ Exercise 9
 Solve Exercise 9 here:
 */
 console.log('Exercise 9 solution');
-pokemon.forEach(starterPokemon => (starterPokemon.starter === true) && console.log(starterPokemon));
+pokemon.forEach(starterPokemon => (starterPokemon.starter === true) && console.log(starterPokemon.name));
 
 
 /*
@@ -260,14 +260,18 @@ This method should:
 
 Solve Exercise 14 here:
 */
-let toTalParty=0;
+let totalCount=0;
 game.partyCount=function(){
-game.party.forEach(gamePartyTotal => toTalParty+=1)
+game.party.forEach (countPokemonNumber => totalCount++) 
+
 }
 console.log('Exercise 14 solution');
-console.log(`Total Pokemonis: ${toTalParty}`);
 game.partyCount();
-console.log(`Total Pokemonis: ${toTalParty}`);
+console.log(`Total Pokemon is: ${totalCount}`);
+totalCount=0
+
+
+
 
 /*
 Exercise 15
